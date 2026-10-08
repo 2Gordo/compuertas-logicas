@@ -1,0 +1,18 @@
+package com.simulador.modelo.compuertas;
+
+import com.simulador.modelo.EntradaLogica;
+
+public class NOR extends Compuerta {
+    private EntradaLogica A;
+    private EntradaLogica B;
+    
+    public NOR(EntradaLogica A, EntradaLogica B) {
+        super("NOR");
+        this.A = A;
+        this.B = B;
+    }
+    
+    public boolean evaluar() {
+        return !(A.getValor() || B.getValor());
+    }
+}

@@ -4,7 +4,10 @@
  */
 package com.simulador.modelo.bancos;
 
-import com.simulador.modelo.AND;
+import com.simulador.modelo.EntradaLogica;
+import com.simulador.modelo.compuertas.AND;
+import com.simulador.modelo.compuertas.NAND;
+import com.simulador.modelo.compuertas.NOT;
 
 /**
  *
@@ -14,21 +17,24 @@ public class PruebaBancos {
     
     public static void main(String[] args) {
         
-        BancoAND ands = new BancoAND(10);
-        
-        AND a1 = new AND();
-        a1.setEntradaA(true);
-        a1.setEntradaB(false);
-        
-        AND a2 = new AND();
-        a2.setEntradaA(true);
-        a2.setEntradaB(true);
-          
-        ands.agregar(a1);
-        ands.agregar(a2);
-        
-        ands.evaluarTodas();
-        
+        Banco banco = new Banco(10);
+        EntradaLogica A = new EntradaLogica("A", false);
+        EntradaLogica B = new EntradaLogica("B", true);
+
+        AND  and  = new AND(A, B);
+        AND  and2 = new AND(B, B);
+        NAND nand = new NAND(A, B);
+        NOT  not  = new NOT(A);
+
+
+
+        banco.agregar(and);
+        banco.agregar(and2);
+        banco.agregar(nand);
+        banco.agregar(not);
+
+        banco.evaluarTodas();
+
     }
     
 }
