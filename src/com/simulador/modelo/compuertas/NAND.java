@@ -6,8 +6,8 @@ public class NAND extends Compuerta {
     private EntradaLogica A;
     private EntradaLogica B;
     
-    public NAND(EntradaLogica A, EntradaLogica B ) {
-        super("NAND");
+    public NAND(EntradaLogica A, EntradaLogica B, String ID ) {
+        super(ID);
         this.A = A;
         this.B = B;
     }

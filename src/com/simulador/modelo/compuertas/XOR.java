@@ -6,8 +6,8 @@ public class XOR extends Compuerta {
     private EntradaLogica A;
     private EntradaLogica B;
     
-    public XOR(EntradaLogica A, EntradaLogica B) {
-        super("XOR");
+    public XOR(EntradaLogica A, EntradaLogica B, String ID) {
+        super(ID);
         this.A = A;
         this.B = B;
     }

@@ -7,8 +7,8 @@ public class AND extends Compuerta {
     private EntradaLogica B;
     
     
-    public AND (EntradaLogica A, EntradaLogica B) {
-        super("AND");
+    public AND (EntradaLogica A, EntradaLogica B, String ID) {
+        super(ID);
         this.A = A;
         this.B = B;
     }

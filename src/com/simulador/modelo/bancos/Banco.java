@@ -20,10 +20,35 @@ public class Banco {
         return false;
     }
 
-     public void evaluarTodas() {
+    public void evaluarTodas() {
         for (int i = 0; i < cantidad; i++) {
-            System.out.println(compuertas[i].getNombre() + i + " = " + compuertas[i].evaluar());
+            System.out.println(compuertas[i].getNombre() + " = " + compuertas[i].evaluar());
         }
 
+    }
+
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    public void eliminar(String nombre){
+        for(int i = 0; i < cantidad; i++){
+            if(compuertas[i].getNombre().equals(nombre) ){
+                for (int j = i; j < cantidad - 1; j++){
+                    compuertas[j] = compuertas[j + 1];
+                }
+                compuertas[cantidad] = null;
+                cantidad--;
+            }
+        }
+    }
+
+    public int buscar(String nombre){
+        for (int i = 0; i < cantidad; i++){
+            if (nombre.equals(compuertas[i].getNombre())) {
+                return i;
+            }
+        }
+        return -1;
     }
 }

@@ -21,10 +21,10 @@ public class PruebaBancos {
         EntradaLogica A = new EntradaLogica("A", false);
         EntradaLogica B = new EntradaLogica("B", true);
 
-        AND  and  = new AND(A, B);
-        AND  and2 = new AND(B, B);
-        NAND nand = new NAND(A, B);
-        NOT  not  = new NOT(A);
+        AND  and  = new AND(A, B, "AND1");
+        AND  and2 = new AND(B, B,"AND2");
+        NAND nand = new NAND(A, B, "NAND");
+        NOT  not  = new NOT(A, "NOT");
 
 
 
@@ -32,6 +32,10 @@ public class PruebaBancos {
         banco.agregar(and2);
         banco.agregar(nand);
         banco.agregar(not);
+
+        banco.eliminar("AND2");
+
+        System.out.println(banco.buscar("NOT"));
 
         banco.evaluarTodas();
 

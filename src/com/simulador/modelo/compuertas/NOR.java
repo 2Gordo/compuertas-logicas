@@ -6,8 +6,8 @@ public class NOR extends Compuerta {
     private EntradaLogica A;
     private EntradaLogica B;
     
-    public NOR(EntradaLogica A, EntradaLogica B) {
-        super("NOR");
+    public NOR(EntradaLogica A, EntradaLogica B, String ID) {
+        super(ID);
         this.A = A;
         this.B = B;
     }

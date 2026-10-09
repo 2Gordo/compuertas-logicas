@@ -5,8 +5,8 @@ import com.simulador.modelo.EntradaLogica;
 public class NOT extends Compuerta{
     private EntradaLogica A;
     
-    public NOT(EntradaLogica A) {
-        super("NOT");
+    public NOT(EntradaLogica A, String ID) {
+        super(ID);
         this.A = A;
     }
     

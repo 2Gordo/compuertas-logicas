@@ -6,8 +6,8 @@ public class XNOR extends Compuerta{
     private EntradaLogica A;
     private EntradaLogica B;
     
-    public XNOR(EntradaLogica A, EntradaLogica B) {
-        super("XNOR");
+    public XNOR(EntradaLogica A, EntradaLogica B, String ID) {
+        super(ID);
         this.A = A;
         this.B = B;
     }

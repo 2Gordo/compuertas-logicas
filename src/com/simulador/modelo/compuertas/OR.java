@@ -6,8 +6,8 @@ public class OR  extends  Compuerta {
     private EntradaLogica A;
     private EntradaLogica B;
     
-    public OR(EntradaLogica A, EntradaLogica B) {
-        super("OR");
+    public OR(EntradaLogica A, EntradaLogica B, String ID) {
+        super(ID);
         this.A = A;
         this.B = B;
     }
