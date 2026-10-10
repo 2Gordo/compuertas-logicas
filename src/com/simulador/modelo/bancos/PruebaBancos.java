@@ -9,10 +9,6 @@ import com.simulador.modelo.compuertas.AND;
 import com.simulador.modelo.compuertas.NAND;
 import com.simulador.modelo.compuertas.NOT;
 
-/**
- *
- * @author ESTUDIANTE
- */
 public class PruebaBancos {
     
     public static void main(String[] args) {
